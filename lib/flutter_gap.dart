@@ -3,8 +3,8 @@ library flutter_gap;
 import 'package:flutter/material.dart';
 
 /// An ultra simple gap widget to easy and readable code.
-class Gap extends StatelessWidget {
-  const Gap(this.value, {super.key});
+class Gap extends SizedBox {
+  const Gap(this.value, {super.key}) : super(width: value, height: value);
   final double value;
 
   /// Gap separated horizontally
@@ -12,7 +12,30 @@ class Gap extends StatelessWidget {
 
   /// Gap separated vertically
   SizedBox get column => SizedBox(height: value);
+}
 
-  @override
-  Widget build(BuildContext context) => SizedBox(width: value, height: value);
+/// An mixed widget between [Padding] and [Row] or [Column] depending [Axis] value provided
+class Section extends Padding {
+  Section({
+    super.key,
+    required super.padding,
+    required final List<Widget> children,
+    final direction = Axis.vertical,
+    final crossAxisAlignment = CrossAxisAlignment.center,
+    final mainAxisAlignment = MainAxisAlignment.start,
+    final mainAxisSize = MainAxisSize.max,
+  }) : super(
+            child: direction == Axis.vertical
+                ? Column(
+                    crossAxisAlignment: crossAxisAlignment,
+                    mainAxisAlignment: mainAxisAlignment,
+                    mainAxisSize: mainAxisSize,
+                    children: children,
+                  )
+                : Row(
+                    crossAxisAlignment: crossAxisAlignment,
+                    mainAxisAlignment: mainAxisAlignment,
+                    mainAxisSize: mainAxisSize,
+                    children: children,
+                  ));
 }

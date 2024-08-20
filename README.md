@@ -27,6 +27,18 @@ Gap(16.0).row, // Horizontal gap of 16.0 points
 Gap(16.0).column, // Vertical gap of 16.0 points
 ```
 
+5. This package provide a helper widget to build layouts called [Section]
+
+
+```dart
+Section(
+  padding: EdgeInsets.all(8.0),
+  children: [
+    // .. .. ..
+  ],
+),
+```
+
 ## Contributions 
  
 Contributions are welcome! If you find any bugs, have any improvement ideas, or want to add new features, please open an issue or submit a pull request. 

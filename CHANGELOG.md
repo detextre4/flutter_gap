@@ -2,3 +2,7 @@
 
 * Initial release of Flutter Gap.
 * Added the Gap widget for creating horizontal and vertical gaps in Flutter layouts.
+
+## 1.1.0
+
+* Added helper widget [Section] to build layouts
