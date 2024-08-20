@@ -6,3 +6,7 @@
 ## 1.1.0
 
 * Added helper widget [Section] to build layouts
+
+## 1.1.1
+
+* Fixed type assignment in the [Section] widget

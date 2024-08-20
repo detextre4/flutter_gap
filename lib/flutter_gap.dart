@@ -20,10 +20,10 @@ class Section extends Padding {
     super.key,
     required super.padding,
     required final List<Widget> children,
-    final direction = Axis.vertical,
-    final crossAxisAlignment = CrossAxisAlignment.center,
-    final mainAxisAlignment = MainAxisAlignment.start,
-    final mainAxisSize = MainAxisSize.max,
+    final Axis direction = Axis.vertical,
+    final CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
+    final MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
+    final MainAxisSize mainAxisSize = MainAxisSize.max,
   }) : super(
             child: direction == Axis.vertical
                 ? Column(
