@@ -10,3 +10,7 @@
 ## 1.1.1
 
 * Fixed type assignment in the [Section] widget
+
+## 1.1.2
+
+* Added columnOrRow method in Gap widget to render gap horizontally or vertically based on isMobile bool

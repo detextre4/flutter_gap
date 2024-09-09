@@ -8,10 +8,39 @@ class Gap extends SizedBox {
   final double value;
 
   /// Gap separated horizontally
+  ///
+  /// example:
+  /// {@tool snippet}
+  /// ```dart
+  /// const Gap(8.0).row
+  /// ```
+  /// {@end-tool}
   SizedBox get row => SizedBox(width: value);
 
   /// Gap separated vertically
+  ///
+  /// example:
+  /// {@tool snippet}
+  /// ```dart
+  /// const Gap(8.0).column
+  /// ```
+  /// {@end-tool}
   SizedBox get column => SizedBox(height: value);
+
+  /// Returns Gap based on isMobile bool provided.
+  ///
+  /// If true will be return Gap separated horizontally,
+  ///
+  /// other case will be return Gap separated vertically
+  ///
+  /// example:
+  /// {@tool snippet}
+  /// ```dart
+  /// const Gap(8.0).columnOrRow(screenWidth <= 880)
+  /// ```
+  /// {@end-tool}
+  SizedBox columnOrRow(bool isMobile) =>
+      isMobile ? SizedBox(height: value) : SizedBox(width: value);
 }
 
 /// An mixed widget between [Padding] and [Row] or [Column] depending [Axis] value provided
