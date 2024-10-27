@@ -68,3 +68,15 @@ class Section extends Padding {
                     children: children,
                   ));
 }
+
+/// An mixed widget between [Align] and [ConstrainedBox]
+class ConstrainedBoxAligned extends Align {
+  ConstrainedBoxAligned({
+    super.key,
+    super.alignment,
+    super.widthFactor,
+    super.heightFactor,
+    required BoxConstraints constraints,
+    required Widget child,
+  }) : super(child: ConstrainedBox(constraints: constraints, child: child));
+}

@@ -14,3 +14,7 @@
 ## 1.1.2
 
 * Added columnOrRow method in Gap widget to render gap horizontally or vertically based on isMobile bool
+
+## 1.2.0
+
+* Added [ConstrainedBoxAligned] widget
